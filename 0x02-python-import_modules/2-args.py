@@ -3,9 +3,7 @@ if __name__ == "__main__":
     
     """Print the count and list of args on different line"""
     
-    import sys
-    
-
+    import sys    
     
     len = len(sys.argv) - 1
     
