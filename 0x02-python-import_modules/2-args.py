@@ -1,25 +1,26 @@
 #!/usr/bin/python3
-
 if __name__ == "__main__":
     
-    from sys import argv
+    """Print the count and list of args on different line"""
     
-argc = len(argv)
+    import sys
+    
 
-if argc < 2:
     
-    print("{} arguments.".format(argc - 1))
+    len = len(sys.argv) - 1
     
-else:
-    
-    if argc == 2:
+    if len == 0:
         
-        print("{} argument:".format(argc - 1))
+        print("0 arguments.")
+        
+    elif len == 1:
+        
+        print("1 argument:")
         
     else:
         
-        print("{} arguments:".format(argc - 1))
+        print("{} arguments:".format((len)))
         
-    for n in range(1, argc):
+    for i in range(1, len + 1):
         
-        print("{}: {}".format(n, argv[n]))
+        print("{}: {}".format(i, sys.argv[i]))
